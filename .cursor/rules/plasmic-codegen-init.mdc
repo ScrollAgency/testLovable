@@ -1,0 +1,29 @@
+# Plasmic Codegen — Initialisation
+
+## Principe général
+Ce projet utilise Plasmic en **mode Codegen**.
+Les fichiers générés par Plasmic font partie du code source et sont versionnés.
+
+## Initialisation
+- Toujours initialiser Plasmic avec :
+  - `plasmic init`
+- Le mode Codegen est la source de vérité pour l’UI.
+
+## Commandes autorisées
+- `plasmic sync`
+- `plasmic sync --force`
+- `plasmic watch`
+
+## Règles strictes
+- ❌ Ne jamais modifier manuellement les fichiers générés par Plasmic
+- ❌ Ne jamais déplacer les fichiers générés
+- ❌ Ne jamais renommer les composants générés
+
+## Arborescence protégée
+Les dossiers suivants sont **intouchables** :
+- `plasmic/`
+- `components/plasmic/`
+
+## Bonnes pratiques
+- Les fichiers générés sont versionnés dans Git
+- Toujours lancer `plasmic sync` après une modification dans l’éditeur Plasmic

@@ -1,0 +1,18 @@
+# Plasmic Codegen — Components
+
+## Règle fondamentale
+Les composants générés par Plasmic ne doivent **jamais** être utilisés directement
+dans le reste de l’application.
+
+Ils doivent toujours être wrappés dans un composant “bridge”.
+
+## Pattern obligatoire
+
+```tsx
+import { Button as PlasmicButton } from "@/components/plasmic/my_project/Button";
+
+export function Button(
+  props: React.ComponentProps<typeof PlasmicButton>
+) {
+  return <PlasmicButton {...props} />;
+}
